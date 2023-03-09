@@ -9,7 +9,6 @@
 
 </script>
 <template lang="">
-
     <div class="col-lg-6 d-flex justify-content-center flex-wrap">
         <div class="card my-3">
             <div class="card-body">
