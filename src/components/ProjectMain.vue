@@ -47,10 +47,8 @@
                 <div v-if="loading" class="col-12 d-flex justify-content-center">
                     <div class="loader"></div>
                 </div>
-                <div v-else>
-                    <div v-for="project in projects" :key="project.id">
-                        <ProjectCard :baseUrl="baseUrl" :project="project" />
-                    </div>
+                <div v-else class="row d-flex">
+                    <ProjectCard v-for="project in projects" :key="project.id" :baseUrl="baseUrl" :project="project" />
                 </div>
                 <div class="row">
                     <div class="col d-flex justify-content-center">
