@@ -1,24 +1,25 @@
 <script>
-    import ProjectCard from './ProjectCard.vue';
+    import ProjectCard from '../components/ProjectCard.vue';
     import axios from 'axios';
+    import { store } from '../store';
     export default {
-        name: "ProjectMain",
+        name: "ProjectList",
         components: {
             ProjectCard,
         },
         data() {
             return {
+                store,
                 projects: [],
-                loading: true,
-                baseUrl: 'http://127.0.0.1:8000',
                 currentPage: 1,
+                loading: true,
                 lastPage: null,
             }
         },
         methods: {
             getProjects(project_page) {
                 this.loading = true;
-                axios.get(`${this.baseUrl}/api/projects`, { params: { page: project_page } }).then((response) => {
+                axios.get(`${this.store.baseUrl}/api/projects`, { params: { page: project_page } }).then((response) => {
                     //PRIMO METODO SENZA RICHIAMO DEL NUMERO DI CARD DA VISUALIZZARE IN UNA PAGINA
                     //this.project = response.data.projects      //.projects fa riferimento alla keyword scritta in project controller su laravel
                     //this.loading = false;
@@ -48,7 +49,7 @@
                     <div class="loader"></div>
                 </div>
                 <div v-else class="row d-flex">
-                    <ProjectCard v-for="project in projects" :key="project.id" :baseUrl="baseUrl" :project="project" />
+                    <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
                 </div>
                 <div class="row">
                     <div class="col d-flex justify-content-center">
@@ -67,8 +68,6 @@
                         </nav>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
