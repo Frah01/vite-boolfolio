@@ -8,6 +8,7 @@ export default {
             <div class="row" >
                 <div class="col-12">
                     <h2 class="text-center">Boolpress</h2>
+                    <p class="fw-semibold text-center" >Bevenenuto su BoolPress</p>
                 </div>
             </div>
         </div>
