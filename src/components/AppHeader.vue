@@ -12,15 +12,19 @@
                         label: 'Projects',
                         routeName: 'project_list',
                     },
+                    {
+                        label: 'Contatti',
+                        routeName: 'contacts',
+                    },
                 ]
             }
         }
     }
 </script>
 <template lang="">
-    <header>
+    <header class="z-index-nav w-100 shadow-box">
         <nav class="navbar navbar-expand-md background-nav">
-            <div class="container-fluid">
+            <div class="container-fluid ">
                 <div class="navbar-brand">
                     <img src="../img/boolean-logo.png" class="logo">
                 </div>
@@ -47,5 +51,14 @@
 
     .logo {
         width: 250px;
+    }
+
+    .z-index-nav{
+        position: fixed;
+        z-index: 1;
+
+        .shadow-box{
+            box-shadow: 1px 1px 5px solid black;
+        }
     }
 </style>

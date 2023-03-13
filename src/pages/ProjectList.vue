@@ -42,8 +42,8 @@
     <div>
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h2 class="text-center">Boolpress</h2>
+                <div class="col-12 mt-5">
+                    <h2 class="text-center mt-5">Boolpress</h2>
                 </div>
                 <div v-if="loading" class="col-12 d-flex justify-content-center">
                     <div class="loader"></div>

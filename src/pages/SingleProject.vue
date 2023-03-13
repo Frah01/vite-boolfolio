@@ -24,11 +24,11 @@
 <template lang="">
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div v-if="loading" class="col-12 d-flex justify-content-center">
+            <div v-if="loading" class="col-12 d-flex justify-content-center mt-5">
                 <div class="loader"></div>
             </div>
-            <div v-else class="col-6">
-                <div class="d-flex justify-content-end my-3">
+            <div v-else class="col-6 mt-5">
+                <div class="d-flex justify-content-end my-5">
                     <router-link :to="{ name: 'project_list'}" class="btn btn-sm btn-success">Torna ai
                         Progetti</router-link>
                 </div>
