@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage.vue';
 import ProjectList from './pages/ProjectList.vue';
 import SingleProject from './pages/SingleProject.vue';
 import Contacts from './pages/Contacts.vue';
+import ThankYou from './pages/ThankYou.vue';
 
 //DEFINISCO L'OGGETTO ROUTER
 const router = createRouter({
@@ -30,6 +31,11 @@ const router = createRouter({
             path: '/contatti',
             name: 'contacts',
             component: Contacts,
+        },
+        {
+            path: '/thank-you',
+            name: 'thank-you',
+            component: ThankYou,
         },
     ]
 });
